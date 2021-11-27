@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid bg-dark text-white">
+        <h2 class="text-center">Weather Dashboard</h2>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <!-- card for search button and displaying searched cities name -->
+            <div class="col-lg-4">
+                <div class="card" id="search-cities">
+                    <div class="card-header">
+                        <h6>Search for a City:</h6>
+                        <form class="form-inline pb-2">
+                            <input type="text" class="form-control mr-2" id="search-input">
+                            <button type="submit" class="btn btn-primary" id="search-btn">
+                  <i class="fa fa-search"></i>
+                </button>
+                        </form>
+
+                        <div class="card hide" id="searched-cities-card">
+                            <ul class="list-group list-group-flush" id="searched-cities-list">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
