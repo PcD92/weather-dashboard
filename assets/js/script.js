@@ -171,18 +171,19 @@ function resetGlobalVariables() {
 }
 
 function searchCity(cityName) {
-    // build URL to query the database
+    /* build URL to query the database */
     console.log(cityName);
     var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" +
         cityName + "&appid=" + APIKey;
 
-    // run the AJAX call to the OpenWatherAPI
+    /* run the AJAX call to the OpenWatherAPI */
     $.ajax({
         url: queryURL,
         method: "GET"
     })
 
-    // store all of the retrieved data inside of an object called "response"
+    /
+    /* store all of the retrieved data inside of an object called "response" */
     .then(function(response) {
         var result = response;
         console.log(result);
@@ -193,7 +194,7 @@ function searchCity(cityName) {
         currentDate = moment.unix(result.dt).format("l");
         console.log(currentDate);
         var tempK = result.main.temp;
-        // Converts the temp to Kelvin with the below formula
+        /* converts the temp to Kelvin with the below formula */
         tempF = ((tempK - 273.15) * 1.80 + 32).toFixed(1);
         humidityValue = result.main.humidity;
         windSpeed = result.wind.speed;
